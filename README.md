@@ -26,6 +26,8 @@ There are some special cards that you can put anywhere  and on any field and hav
  * Joker card : it summs 4 cards you can put this card on any field.
 
 - The programme himself defines which turn it is now the winner of this game is the one he finihes his list first meaning that he will put all his cards on the field
+- When you have available choices after each card on the field, There always one option which is not wanting to choose any of these options even if you can put at least one card, but in this case you will have to afford the consequences of the rules.
+
 
 ## Author of this project
 Anouar Belila , Ono card game console version

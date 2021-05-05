@@ -119,12 +119,20 @@ public class Helper  {
                         e.printStackTrace();
                     }
                 });
+                //IMPROVE
+                System.out.println((list.size() + 1 )+"- Dont't want any of these choices");
+                //IMPROVE
                 System.out.println("What card would you like to put ?  (Type number)");
-
                 TimeUnit.SECONDS.sleep(1);
                 //Delay
-
-                myIndexChoice = scanner.nextInt() - 1;
+                //IMPROVE
+                Integer myChoice = scanner.nextInt();
+                if (myChoice == (list.size() + 1)) {
+                    System.out.println("You decided to not choose any option");
+                    return "NIP";
+                }
+                //IMPROVE
+                myIndexChoice = myChoice - 1;
                 // Demand handling part //
                 if (list.get(myIndexChoice).equals("Demand")) {
                     System.out.println("What color you are demanding \n 1-Red \n 2-Yellow \n 3-Blue \n 3-Green");
