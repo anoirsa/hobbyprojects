@@ -2,7 +2,7 @@ import player.data.Player;
 
 import java.util.*;
 
-public class cardMatch {
+public class CardMatch {
 
 
     public static List<String> matchStart() {

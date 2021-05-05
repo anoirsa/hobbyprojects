@@ -46,6 +46,10 @@ public class Helper  {
     };
     public String displayChoices(List<String> list, String cuurentCard , Order order ) throws InterruptedException {
         if (whoPlayer.equals(USER)) {
+            System.out.println("It is your turn");
+
+            TimeUnit.MILLISECONDS.sleep(500);
+
             System.out.println("These are all the cards you have");
              for (String i : list) {
              int choiceNumber = list.indexOf(i)+1;
@@ -54,6 +58,10 @@ public class Helper  {
              }
         }
         else {
+            System.out.println("It is the computer turn");
+
+            TimeUnit.MILLISECONDS.sleep(500);
+
             System.out.println("Computer cards list is hidden from normal user");
         }
         TimeUnit.SECONDS.sleep(2);

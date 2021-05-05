@@ -1,14 +1,9 @@
 import player.data.Player;
 import player.data.Referee;
-import player.data.Status;
 import player.data.Who;
 
-import java.sql.Time;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
-import java.util.function.BiFunction;
-import java.util.function.Function;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static player.data.Status.*;
@@ -17,10 +12,10 @@ public class GameField {
 
     public static void main(String[] args) throws InterruptedException {
          Scanner scanner = new Scanner(System.in);
-         List<String> listi = cardMatch.matchStart();
+         List<String> listi = CardMatch.matchStart();
 
          Map<String, Long> collect = listi.stream().collect(Collectors.groupingBy(i -> i, Collectors.counting()));
-         List<String>[] lists = cardMatch.distibuteCards(listi);
+         List<String>[] lists = CardMatch.distibuteCards(listi);
          List<String> remainigCards = lists[0];
          System.out.println("Enter your name");
 
@@ -33,7 +28,7 @@ public class GameField {
          System.out.println(lists[1]);
          TimeUnit.SECONDS.sleep(4);
          // DELAY
-         if(cardMatch.whoStart(me,computer).getPlayerName().equals(me.getPlayerName())) {
+         if(CardMatch.whoStart(me,computer).getPlayerName().equals(me.getPlayerName())) {
               me.setStatus(TURN);
               System.out.println("Your turn is the first");
          }
